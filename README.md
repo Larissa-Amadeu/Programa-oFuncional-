@@ -3,9 +3,9 @@ Encontrar uma média com o método reduce em JavaScript​
 Em vez de registrar a soma, é possível dividir a soma pelo comprimento do array antes de retornar um valor final.
 A maneira de fazer isso é tirar vantagem dos outros parâmetros do método reduce. O primeiro desses argumentos é o índice. Assim como em um laço for, o índice se refere ao número de vezes que o redutor fez o laço percorrendo o array. O último argumento é o próprio array.
 
-const dolar = [29.76, 41.85, 46.5];
+const valores = [29.76, 41.85, 46.5];
 
-const media = dolar.reduce((total, valor, índice, array) => {
+const media = valores.reduce((total, valor, índice, array) => {
   total += valor;
   if( índice === array.length-1) { 
     return total/array.length;
@@ -21,7 +21,7 @@ duplicar o total, ou dividir cada número por dois antes de somá-los ou usar um
 -retornar um único valor e reduzir um array a um outro array novo.
 O valor inicial é o valor do parâmetro total quando a redução iniciar. Define o valor inicial adicionando uma vírgula, seguida por seu valor inicial dentro do parênteses, mas após as chaves.
 
-const media = dolar.reduce((total, valor, índice, array) => {
+const media = valores.reduce((total, valor, índice, array) => {
   total += valor
   return total/array.length
 }, 0);
